@@ -36,10 +36,59 @@ function countCard(count, card) {
       choice = "Hold";
    }
 
-   return count + " " + choice;
+   result = count + " " + choice;
+   console.log(result);
+   return result;
 }
 
 // Record Collection
+var collection = {
+   2548: {
+      album: "Slippery When Wet",
+      artist: "Bon Jovi",
+      tracks: ["Let It Rock", "You Give Love a Bad Name"],
+   },
+   2468: {
+      album: "1999",
+      artist: "Prince",
+      tracks: ["1999", "Little Red Corvette"],
+   },
+   1245: {
+      artist: "Robert Palmer",
+      tracks: [],
+   },
+   5439: {
+      album: "ABBA Gold",
+   },
+};
+
+function updateRecords(id, prop, value) {
+   // updates or makes a new record in your collection
+   if (collection.hasOwnProperty(id) == false) {
+      // if there is no record with this id
+      // make a new record with the id
+      console.log("There are no records with that id, making a new one.");
+      collection[id] = {};
+   }
+
+   if (prop != "tracks" && value != "") {
+      collection[id][prop] = value;
+      console.log("set " + prop + " of " + id + " to " + value);
+   } else if (
+      prop == "tracks" &&
+      collection[id].hasOwnProperty("tracks") == false
+   ) {
+      collection[id].tracks = [value];
+   } else if (prop == "tracks" && value != "") {
+      collection[id].tracks.push(value);
+   } else if (value == "") {
+      delete collection[id][prop];
+   }
+
+   console.log(collection);
+
+   return "See the console to examine updated collection details.";
+}
 
 // Iterate Odd Numbers With a For Loop
 
