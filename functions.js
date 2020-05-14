@@ -91,6 +91,16 @@ function updateRecords(id, prop, value) {
 }
 
 // Iterate Odd Numbers With a For Loop
+function iterateBy(start, end, increment) {
+   // returns a list of numbers from start to end incrementing by increment
+   var myArray = [];
+
+   for (var number = start; number <= end; number += increment) {
+      myArray.push(number);
+   }
+
+   return myArray;
+}
 
 // Profile Lookup
 
