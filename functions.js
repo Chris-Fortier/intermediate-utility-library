@@ -103,6 +103,67 @@ function iterateBy(start, end, increment) {
 }
 
 // Profile Lookup
+var contacts = [
+   {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+   },
+   {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+   },
+   {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+   },
+   {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+   },
+];
+
+function lookUpProfile(name, prop) {
+   // make a contact list to display in the console if needed
+   var contactList = [];
+
+   // first step is find the contact index if it exists
+   var contactIndex = null;
+   for (var i = 0; i < contacts.length; i++) {
+      contactList.push(contacts[i].firstName);
+      if (name == contacts[i].firstName) {
+         // if this contact exists
+         contactIndex = i;
+      }
+   }
+
+   if (contactIndex == null) {
+      console.log(contactList);
+      return "No such contact, see console for a list of contacts.";
+   } // if there is no such contact
+   else {
+      // contact is found
+
+      // see if the property exists for the found contact
+      if (contacts[contactIndex].hasOwnProperty(prop)) {
+         // if this property exists
+         return contacts[contactIndex][prop];
+      } else {
+         console.log(contacts[contactIndex]);
+         return (
+            contacts[contactIndex].firstName +
+            " has no such property. See console for a list of properties."
+         );
+      }
+   }
+}
 
 // Generate Random Whole Numbers within a Range
 
