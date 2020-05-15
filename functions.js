@@ -184,6 +184,12 @@ function mySplice(array, spliceStart, sliceLength) {
 }
 
 // Add Items Using splice()
+function spliceAdd(array, spliceStart, sliceLength, newItems) {
+   // Takes array, deletes sliceLength items starting with spliceStart, then adds newItems in their place. newItems must be an array.
+   array.splice(spliceStart, sliceLength, ...newItems); // ... notation "spreads" the array out into separate arguments
+   console.log(array);
+   return array;
+}
 
 // Check For The Presence of an Element With indexOf()
 
