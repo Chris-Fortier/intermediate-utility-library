@@ -177,6 +177,11 @@ function randomRange(myMin, myMax, amount = 1) {
 }
 
 // Remove Items Using splice()
+function mySplice(array, spliceStart, sliceLength) {
+   // Takes array, then splices out sliceLength items starting with spliceStart.
+   array.splice(spliceStart, sliceLength);
+   return array;
+}
 
 // Add Items Using splice()
 
