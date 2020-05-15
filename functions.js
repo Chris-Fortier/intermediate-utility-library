@@ -166,6 +166,15 @@ function lookUpProfile(name, prop) {
 }
 
 // Generate Random Whole Numbers within a Range
+function randomRange(myMin, myMax, amount = 1) {
+   randomNumbers = [];
+   for (var i = 0; i < amount; i++) {
+      randomNumbers.push(
+         Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
+      );
+   }
+   return randomNumbers;
+}
 
 // Remove Items Using splice()
 
