@@ -202,3 +202,7 @@ function quickCheck(arr, elem) {
 }
 
 // Use typeof to Check the Type of a Variable
+function getType(variable) {
+   // Get the type of a variable.
+   return typeof variable;
+}
