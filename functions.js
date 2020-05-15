@@ -192,5 +192,13 @@ function spliceAdd(array, spliceStart, sliceLength, newItems) {
 }
 
 // Check For The Presence of an Element With indexOf()
+function quickCheck(arr, elem) {
+   // Check to see if elem exists in array arr.
+   if (arr.indexOf(elem) != -1) {
+      return true;
+   } else {
+      return false;
+   }
+}
 
 // Use typeof to Check the Type of a Variable
