@@ -3,8 +3,6 @@
 // Counting Cards
 var count = 0;
 function countCard(card) {
-   var countChange = 0;
-
    switch (card) {
       case "A":
       case "K":
@@ -16,18 +14,16 @@ function countCard(card) {
       case "j":
       case "t":
       case 10:
-         countChange = -1;
+         count -= 1;
          break;
       case 6:
       case 5:
       case 4:
       case 3:
       case 2:
-         countChange = +1;
+         count += 1;
          break;
    }
-
-   count += countChange;
 
    var choice;
 
