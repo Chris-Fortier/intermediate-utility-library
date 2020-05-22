@@ -1,7 +1,8 @@
 // Your functions go here!
 
 // Counting Cards
-function countCard(count, card) {
+var count = 0;
+function countCard(card) {
    var countChange = 0;
 
    switch (card) {
@@ -36,7 +37,7 @@ function countCard(count, card) {
       choice = "Hold";
    }
 
-   result = count + " " + choice;
+   result = "Current count = " + count + ", " + choice;
    console.log(result);
    return result;
 }
